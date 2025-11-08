@@ -1,79 +1,105 @@
 <!DOCTYPE html>
+<!-- Define a versão do HTML usada pelo navegador (HTML5).  -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <!-- Garante que caracteres acentuados e emojis sejam exibidos corretamente. -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Faz o layout se ajustar a telas pequenas (celulares), impedindo zoom automático. -->
+
   <title>Admelotech — Digital Services</title>
+  <!-- Título que aparece na aba do navegador e em resultados de busca. -->
+
   <meta name="description" content="Admelotech — digital services studio. Coming soon." />
+  <!-- Breve descrição para SEO e compartilhamento. -->
+
   <meta name="theme-color" content="#000000" />
+  <!-- Cor do tema em navegadores móveis (barra do navegador fica preta). -->
+
   <style>
+    /* ======= ESTILOS GERAIS (CSS) ======= */
+
     html, body {
-      height: 100%;
-      margin: 0;
-      font-family: 'Arial Narrow', Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      text-align: center;
+      height: 100%;            /* Faz a página ocupar a altura total da janela. */
+      margin: 0;               /* Remove margens padrão do navegador. */
+      font-family: 'Arial Narrow', Arial, sans-serif; /* Fonte principal solicitada. */
+      background: #000;        /* Fundo totalmente preto. */
+      color: #fff;             /* Texto branco para alto contraste. */
+      display: flex;           /* Ativa flexbox para organizar o layout vertical. */
+      flex-direction: column;  /* Coloca header, main e footer em coluna. */
+      justify-content: space-between; /* Empurra header para cima e footer para baixo. */
+      text-align: center;      /* Centraliza textos por padrão. */
     }
+
+    /* ======= CABEÇALHO E RODAPÉ ======= */
     header, footer {
-      padding: 20px;
-      border-color: rgba(255,255,255,0.1);
-      border-style: solid;
+      padding: 20px;                             /* Espaço interno para respirar. */
+      border-color: rgba(255,255,255,0.1);       /* Cor sutil das bordas. */
+      border-style: solid;                       /* Define que as bordas são sólidas. */
     }
-    header {
-      border-bottom-width: 1px;
-    }
-    footer {
-      border-top-width: 1px;
-    }
+    header { border-bottom-width: 1px; }         /* Linha separando o topo do conteúdo. */
+    footer { border-top-width: 1px; }            /* Linha separando o rodapé. */
+
+    /* ======= LOGOTIPO / MARCA ======= */
     .brand {
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 1px;
+      font-size: 28px;        /* Tamanho maior para dar destaque ao nome. */
+      font-weight: bold;      /* Deixa a marca em negrito. */
+      letter-spacing: 1px;    /* Aumenta o espaçamento entre letras para estilo. */
     }
+
+    /* ======= ÁREA CENTRAL (CONTEÚDO PRINCIPAL) ======= */
     main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      flex: 1;                         /* Ocupa o espaço livre entre header e footer. */
+      display: flex;                   /* Flexbox para centralizar conteúdo. */
+      align-items: center;             /* Centraliza verticalmente. */
+      justify-content: center;         /* Centraliza horizontalmente. */
     }
     .coming-soon {
-      font-size: 32px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      font-size: 32px;                 /* Título grande no centro. */
+      text-transform: uppercase;       /* Deixa em CAIXA ALTA para impacto. */
+      letter-spacing: 2px;             /* Respiro visual nas letras. */
     }
+
+    /* ======= LINKS SOCIAIS ======= */
     .socials {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-      font-size: 14px;
+      display: flex;                   /* Distribui links lado a lado. */
+      gap: 20px;                       /* Espaço entre os links. */
+      justify-content: center;         /* Centraliza no rodapé. */
+      flex-wrap: wrap;                 /* Quebra linha em telas pequenas. */
+      font-size: 14px;                 /* Tamanho discreto. */
     }
     a {
-      color: #fff;
-      text-decoration: none;
+      color: #fff;                     /* Links brancos sobre fundo preto. */
+      text-decoration: none;           /* Remove sublinhado padrão. */
     }
     a:hover {
-      opacity: 0.8;
+      opacity: 0.8;                    /* Efeito de hover simples e elegante. */
     }
   </style>
 </head>
 <body>
+  <!-- ======= CABEÇALHO ======= -->
   <header>
     <div class="brand">Admelotech</div>
+    <!-- Nome da empresa, conforme pedido (tudo junto). -->
   </header>
 
+  <!-- ======= CONTEÚDO PRINCIPAL ======= -->
   <main>
     <div class="coming-soon">Digital Services Coming Soon</div>
+    <!-- Mensagem central minimalista, sem outras frases. -->
   </main>
 
+  <!-- ======= RODAPÉ ======= -->
   <footer>
     <div class="socials">
-      <a href="https://instagram.com/admelotech" target="_blank" rel="noopener">Instagram: @admelotech</a>
+      <a href="https://instagram.com/admelotech" target="_blank" rel="noopener">
+        Instagram: @admelotech
+      </a>
+      <!-- Link externo abre em nova aba; rel="noopener" é segurança/performance. -->
       <a href="mailto:admelotech@gmail.com">Email: admelotech@gmail.com</a>
+      <!-- mailto: abre o cliente de e-mail do usuário para contato rápido. -->
     </div>
   </footer>
 </body>
