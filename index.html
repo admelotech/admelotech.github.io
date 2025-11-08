@@ -3,150 +3,78 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Admelo Tech — Digital Services</title>
-  <meta name="description" content="Admelo Tech — digital services studio. Under construction. Connect via Instagram @admelotech or email admelotech@gmail.com." />
-  <meta property="og:title" content="Admelo Tech — Digital Services" />
-  <meta property="og:description" content="Under construction. Follow @admelotech and contact admelotech@gmail.com." />
-  <meta property="og:type" content="website" />
+  <title>Admelotech — Digital Services</title>
+  <meta name="description" content="Admelotech — digital services studio. Coming soon." />
   <meta name="theme-color" content="#000000" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='black'/%3E%3Ctext x='50' y='58' font-size='56' text-anchor='middle' fill='white' font-family='Arial Narrow, Arial, sans-serif'%3EA%3C/text%3E%3C/svg%3E" />
   <style>
-    :root{
-      --bg-top:#7a7a7a;
-      --bg-mid:#2b2b2b;
-      --bg-bottom:#000;
-      --text:#f1f1f1;
-      --muted:#bdbdbd;
-      --accent:#ffffff;
-      --border:rgba(255,255,255,0.15);
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
+    html, body {
+      height: 100%;
+      margin: 0;
       font-family: 'Arial Narrow', Arial, sans-serif;
-      color:var(--text);
-      background: linear-gradient(to top, var(--bg-bottom) 0%, var(--bg-mid) 45%, var(--bg-top) 100%);
-      display:grid;
-      grid-template-rows:auto 1fr auto;
+      background: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
     }
-    a{color:var(--accent); text-decoration:none}
-    a:hover{opacity:.9}
-
-    header{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:18px clamp(16px,4vw,48px);
-      border-bottom:1px solid var(--border);
-      backdrop-filter:saturate(120%) blur(4px);
+    header, footer {
+      padding: 20px;
+      border-color: rgba(255,255,255,0.1);
+      border-style: solid;
     }
-    .brand{display:flex; align-items:center; gap:14px}
-    .logo{
-      width:38px; height:38px; border-radius:12px;
-      background:radial-gradient(circle at 30% 30%, #fff 0%, #cfcfcf 12%, #7a7a7a 40%, #111 100%);
-      box-shadow:0 6px 24px rgba(0,0,0,.45), inset 0 1px 2px rgba(255,255,255,.2);
-      position:relative; isolation:isolate;
+    header {
+      border-bottom-width: 1px;
     }
-    .logo::after{
-      content:"A"; position:absolute; inset:0; display:grid; place-items:center; font-weight:800; color:#000; mix-blend-mode:screen;
+    footer {
+      border-top-width: 1px;
     }
-    .brand h1{font-size:clamp(18px,3vw,24px); margin:0; letter-spacing:.6px}
-    .tag{color:var(--muted); font-size:12px; border:1px solid var(--border); padding:4px 8px; border-radius:999px}
-
-    main{display:grid; place-items:center; padding:48px clamp(16px,5vw,64px)}
-    .hero{max-width:980px; width:100%; text-align:center}
-    .badge{display:inline-flex; gap:8px; align-items:center; border:1px solid var(--border); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:12px; backdrop-filter:blur(2px)}
-    .badge .dot{width:8px; height:8px; border-radius:999px; background:#00ff8c; box-shadow:0 0 10px #00ff8c}
-
-    .title{font-size:clamp(38px,7vw,84px); line-height:1.05; margin:18px 0}
-    .subtitle{color:var(--muted); font-size:clamp(16px,2.5vw,20px); max-width:760px; margin:0 auto 28px}
-
-    .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap}
-    .btn{padding:12px 18px; border-radius:14px; border:1px solid var(--border); font-weight:600; letter-spacing:.4px; transition:transform .2s ease, box-shadow .2s ease, background .2s ease}
-    .btn-primary{background:#111; box-shadow:0 10px 30px rgba(0,0,0,.45)}
-    .btn-primary:hover{transform:translateY(-2px)}
-    .btn-ghost{background:transparent}
-
-    .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin:42px auto 16px; max-width:1000px}
-    .card{border:1px solid var(--border); border-radius:18px; padding:18px; background:rgba(0,0,0,0.35); backdrop-filter:blur(2px)}
-    .card h3{margin:0 0 8px; font-size:18px}
-    .card p{margin:0; color:var(--muted); font-size:14px}
-
-    .construction{margin:40px auto 0; display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border-radius:12px; border:1px dashed var(--border); color:var(--muted)}
-    .spinner{width:12px; height:12px; border:2px solid rgba(255,255,255,.25); border-top-color:#fff; border-radius:50%; animation:spin 1s linear infinite}
-    @keyframes spin{to{transform:rotate(360deg)}}
-
-    footer{padding:18px clamp(16px,4vw,48px); border-top:1px solid var(--border); display:flex; flex-wrap:wrap; gap:12px; align-items:center; justify-content:space-between}
-    .socials{display:flex; gap:12px; align-items:center}
-    .socials a{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:12px; border:1px solid var(--border)}
-    .copy{color:var(--muted); font-size:12px}
-
-    @media (max-width:420px){
-      .title{letter-spacing:-.5px}
+    .brand {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .coming-soon {
+      font-size: 32px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .socials {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover {
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="brand">
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <h1>Admelo Tech</h1>
-        <div class="tag">digital services</div>
-      </div>
-    </div>
-    <nav class="socials">
-      <a href="https://instagram.com/admelotech" target="_blank" rel="noopener">📷 @admelotech</a>
-      <a href="mailto:admelotech@gmail.com">✉️ admelotech@gmail.com</a>
-    </nav>
+    <div class="brand">Admelotech</div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="badge"><span class="dot"></span> always-on innovation</div>
-      <h2 class="title">Future-proof <em>digital</em> solutions</h2>
-      <p class="subtitle">We craft streamlined experiences, pixel-perfect brands, and efficient tech stacks for ambitious companies. Our website is currently evolving, but you can already connect and brief your project.</p>
-
-      <div class="cta-row">
-        <a class="btn btn-primary" href="mailto:admelotech@gmail.com?subject=Project%20Inquiry%20—%20Admelo%20Tech">Start a project</a>
-        <a class="btn btn-ghost" href="https://instagram.com/admelotech" target="_blank" rel="noopener">Follow on Instagram</a>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Brand & Visual</h3>
-          <p>Logos, style systems, and design kits to keep your brand consistent and sharp.</p>
-        </article>
-        <article class="card">
-          <h3>Web Experiences</h3>
-          <p>Landing pages, corporate sites, and lightweight apps with fast performance.</p>
-        </article>
-        <article class="card">
-          <h3>Content & Social</h3>
-          <p>Campaign assets, motion snippets, and content calendars that convert.</p>
-        </article>
-        <article class="card">
-          <h3>Automation</h3>
-          <p>Form-to-inbox flows, no-code stacks, and simple integrations to save time.</p>
-        </article>
-      </div>
-
-      <div class="construction">
-        <span class="spinner"></span>
-        <strong>Under construction</strong> — new site launching soon
-      </div>
-    </section>
+    <div class="coming-soon">Digital Services Coming Soon</div>
   </main>
 
   <footer>
-    <div class="copy">© <span id="year"></span> Admelo Tech. All rights reserved.</div>
     <div class="socials">
-      <a href="https://instagram.com/admelotech" target="_blank" rel="noopener">Instagram</a>
-      <a href="mailto:admelotech@gmail.com">Email</a>
+      <a href="https://instagram.com/admelotech" target="_blank" rel="noopener">Instagram: @admelotech</a>
+      <a href="mailto:admelotech@gmail.com">Email: admelotech@gmail.com</a>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
